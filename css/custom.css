@@ -408,8 +408,8 @@ footer a:focus {
     text-align: left;
 }
 
-.radio: active {
-    background:
+input[type='radio']:checked: {
+    background: green;
 }
 
 
