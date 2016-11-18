@@ -437,6 +437,14 @@ footer a:focus {
     text-align: left;
 }
 
+.question-button {
+  width: 100%;
+  text-align: right;
+}
+
+.question-button button {
+    margin-left: 20px;
+}
 
 
 /***** resultate *****/
