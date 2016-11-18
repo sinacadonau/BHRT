@@ -30,7 +30,7 @@
            session_start();
            $user = mysqli_fetch_assoc($result);
            $_SESSION['userid'] = $user['u_id'];
-           header("Location:html/profil.php");
+           header("Location:php/profil.php");
          }else{
            // Fehlermeldungen werden erst später angezeigt
            $error = true;
