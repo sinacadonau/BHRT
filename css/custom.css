@@ -425,6 +425,29 @@ input[type='radio']:checked: {
     background: green;
 }
 
+/***** resultate *****/
+.body-resultate {
+    background: #874C62;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F2D388, #C98474, #874C62);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F2D388, #C98474, #874C62);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F2D388, #C98474, #874C62);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F2D388, #C98474, #874C62);
+    /* Standard syntax (must be last) */
+    padding-top: 65px;
+}
+
+.resultate-box {
+    margin-top: 20px;
+    padding: 25px 25px 25px 25px;
+    background: #444;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
 
 /***** Media queries *****/
 
