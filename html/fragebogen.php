@@ -116,9 +116,15 @@
                 <div class="radio">
                     <label>
                         <input type="radio" name="optradio" class="radio">Option 3</label>
+                </div>
+                <div class="radio">
+                      <label>
+                          <input type="radio" name="optradio" class="radio">Option 4</label>
 
                 </div>
-                <button type="submit" name="submit" id="question-submit" class="btn" value="weiter">nächste Frage</button>
+                <button type="submit" name="submit" id="question-submit" class="btn" value="zurück">zurück</button>
+                <button type="submit" name="submit" id="question-submit" class="btn" value="weiter">weiter</button>
+
 
             </div>
         </div>
