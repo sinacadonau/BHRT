@@ -337,6 +337,24 @@ footer a:focus {
   margin: 20px;
 }
 
+<<<<<<< HEAD
+.buttonprofil {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  height: 50px;
+  text-align: center;
+  margin-top: 30px
+}
+.buttonprofil button{
+  font-size: 30px;
+  width: 300px;
+  height: 100%;
+
+}
+=======
+>>>>>>> dac0e51d40a9355d9d5662d1ffcd264862248de2
+
 /***** Einstellungen *****/
 
 .modal-popup {
@@ -421,9 +439,7 @@ footer a:focus {
     text-align: left;
 }
 
-input[type='radio']:checked: {
-    background: green;
-}
+
 
 /***** resultate *****/
 .body-resultate {
