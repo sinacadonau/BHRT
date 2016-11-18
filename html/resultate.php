@@ -68,7 +68,7 @@
 
                 <div class="col-sm-8 col-sm-offset-2">
                     <div class="footer-border"></div>
-                    <p>HTW Chur | info@bhrt.ch | 081 286 25 25 </p>
+                    <p>HTW Chur | info@bhrt.ch | 081 286 24 24 </p>
                 </div>
 
             </div>
