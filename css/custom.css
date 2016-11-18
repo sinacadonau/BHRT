@@ -421,9 +421,7 @@ footer a:focus {
     text-align: left;
 }
 
-input[type='radio']:checked: {
-    background: green;
-}
+
 
 
 /***** Media queries *****/
