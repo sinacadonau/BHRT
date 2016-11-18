@@ -18,6 +18,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/custom.css">
+        <link rel="stylesheet" href="../css/form-elements.css">
 </head>
 
 <body class="body-profil">
@@ -59,7 +60,86 @@
         <p>Mach den beliebtesten Typologientest! </p>
     </div>
 
+    <!-- Typologien-Container Test-Box -->
 
+    <div class="row">
+        <div class="col-sm-5">
+            <!-- Login-Formular-->
+            <div class="form-box">
+                <div class="form-top">
+                    <div class="form-top-left">
+                        <h3>Login</h3>
+                    </div>
+                    <div class="form-top-right">
+                        <i class="fa fa-lock"></i>
+                    </div>
+                </div>
+
+      <!-- Typologien-Container -->
+    <div class="container">
+    <div class="claimHead col-md-12">
+        <div class="submitHeader" style="margin-top: 60px; margin-bottom: 60px; margin-left: 30px;">
+            <h1 style="font-size: 36px;">Die 4 Typologien</h1>
+            <p style="font-size: 18px;">Jeder Mensch ist anders. blabla</p>
+        </div>
+        <div id="stepsContainer">
+            <div class="col-md-6 stepsBox">
+                <div class="claimSteps" id="stepOne">
+                    <p class="claimStepNumber">1</p>
+                    <p class="claimStepTitle">Der Bastler</p>
+                    <p class="claimStepText">Bastler lieben es, die Welt mit ihren Händen und mit ihren Augen zu erforschen,
+                      sie zu fühlen und zu untersuchen mit kühlem Rationalismus und geistreicher Neugier. Bastler gehen von
+                      einem Projekt zum nächsten, erschaffen das Nützliche nur des Spaßes wegen und lernen gleichzeitig von
+                      ihrem Umfeld. Oft sind Bastler Mechaniker oder Ingenieure, welche die größte Freunde daran haben, ihre
+                      Hände dreckig zu machen, um Dinge auseinander zu nehmen und sie wieder zusammen zu setzen, nur ein
+                      bisschen besser, als sie vorher waren.</p>
+                </div>
+            </div>
+        </div>
+        <div id="stepsContainer">
+            <div class="col-md-6 stepsBox">
+                <div class="claimSteps" id="stepOne">
+                    <p class="claimStepNumber">2</p>
+                    <p class="claimStepTitle">Der Macher</p>
+                    <p class="claimStepText">Der Macher ist ein selbstbewusster und sehr unabhängiger Mensch.
+                      Er ist eine ruhige und sachliche Person, sehr rational, ein ausgesprochener Verstandesmensch.
+                      Seinen Individualismus pflegt er intensiv und er genießt es, seine analytischen Fähigkeiten an neuen Aufgaben
+                      zu messen. Dabei ist er jedoch ein sehr spontaner und impulsiver Mensch, der gerne seinen plötzlichen
+                      Eingebungen folgt.</p>
+                      <br> </br>
+                      <br> </br>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="stepsContainer">
+            <div class="col-md-6 stepsBox">
+                <div class="claimSteps" id="stepOne">
+                    <p class="claimStepNumber">3</p>
+                    <p class="claimStepTitle">Der Denker</p>
+                    <p class="claimStepText">Der Denker ist für gewöhnlich sehr selbstsicher und lässt sich von Konflikten und Kritik
+                      nicht aus der Ruhe bringen. Er besitzt ein ausgeprägtes Bewusstsein für seine eigenen Stärken und zweifelt nicht
+                      an seinen Fähigkeiten. Häufig sind Menschen dieses Persönlichkeitstypus‘ beruflich sehr erfolgreich, da sie Kompetenz
+                      und Zielstrebigkeit in sich vereinen..</p>
+                </div>
+            </div>
+        </div>
+        <div id="stepsContainer">
+            <div class="col-md-6 stepsBox">
+                <div class="claimSteps" id="stepOne">
+                    <p class="claimStepNumber">4</p>
+                    <p class="claimStepTitle">Der Organisator</p>
+                    <p class="claimStepText">Sie sind Repräsentanten der Tradition und Ordnung und wissen ihr Verständnis für das, was richtig
+                      und falsch ist, einzusetzen. Sie sind gesellschaftlich anerkannt, sodass sie Menschen zusammenführen können. Da sie Werte
+                      wie Ehrlichkeit, Hingabe und Würde hoch schätzen, sind Organisatoren häufige Ansprechpartner, wenn es um Rat und Anweisung
+                      geht, und sie schätzen sich glücklich, den Weg aus schwierigen Lagen vorzugeben.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Typologien Container -->
 
     <!-- Footer -->
     <footer>
