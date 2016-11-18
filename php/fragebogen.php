@@ -104,7 +104,7 @@
                 <h3 class="question">Frage 1</h3>
             </div>
 
-            <div class="question-box">
+            <div class="question-bottom">
                 <div class="radio">
                     <label>
                         <input type="radio" name="optradio" class="radio">Option 1</label>
