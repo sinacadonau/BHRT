@@ -8,6 +8,11 @@
 
 	require_once("../system/data.php");
 
+  if(isset($_GET['q_id'])){
+    $q_id = $_GET['q_id'];
+  } else {
+    $q_id =
+  }
 
   ?>
 
@@ -130,8 +135,23 @@
                           <input type="radio" name="optradio" class="radio">Option 4</label>
   </div>
                 <div class="question-button">
-                <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
-                <button type="submit" name="submit" id="answer-submit" class="btn" value="weiter">weiter</button>
+                  <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
+
+
+<!-- PHP noch ergänzen!!! -->
+
+
+
+                <a href="fragebogen.php?q_id=<?php echo  ?>">
+
+
+
+
+
+
+
+                  <button type="submit" name="submit" id="answer-submit" class="btn" value="weiter">weiter</button>
+                </a>
 </div>
 
 

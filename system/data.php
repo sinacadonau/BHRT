@@ -20,7 +20,7 @@ function get_result($sql)
 
 
   /* *********************************************************
-  	/* Login
+  	/* Login und Register
   	/* ****************************************************** */
 
   	function login($email , $password){
@@ -32,6 +32,12 @@ function get_result($sql)
       $sql = "INSERT INTO user (email, password, name) VALUES ('$email', '$password', '$name');";
   		return get_result($sql);
   	}
+
+
+		/* *********************************************************
+			/* Fragebogen
+			/* ****************************************************** */
+		
 
 
 	?>
