@@ -60,7 +60,7 @@
 
     <!-- Page Content -->
     <div class="container">
-        <h1>Einstellungen</h1>
+        <h1>Fragebogen</h1>
 
         <!-- Horizontale Timeline -->
         <div class="question-box">
