@@ -38,18 +38,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand active" href="profil.html"><img style="max-height: 100%" src="../img/BHRT_logo-01.png"></a>
+                <a class="navbar-brand active" href="profil.php"><img style="max-height: 100%" src="../img/BHRT_logo-01.png"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="fragebogen.html"><i class="fa fa-pencil"></i> Fragebogen</a></li>
-                    <li><a href="resultate.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Resultate</a></li>
+                    <li><a href="fragebogen.php"><i class="fa fa-pencil"></i> Fragebogen</a></li>
+                    <li><a href="resultate.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> Resultate</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="einstellungen.html"><i class="fa fa-cog" aria-hidden="true"></i> Einstellungen</a></li>
-                    <li><a href="../index.html"><i class="fa fa-lock" aria-hidden="true"></i> Logout</a></li>
+                    <li><a href="einstellungen.php"><i class="fa fa-cog" aria-hidden="true"></i> Einstellungen</a></li>
+                    <li><a href="../index.php"><i class="fa fa-lock" aria-hidden="true"></i> Logout</a></li>
                 </ul>
 
             </div>
