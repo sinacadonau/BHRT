@@ -84,18 +84,21 @@
         <div class="modal fade" id="bearbeitenModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-popup">
-                    <form enctype="multipart/form-data" action="profil.php" method="post">
+                    <form enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                         <div class="modal-header">
                             <h1 class="modal-title" id="myModalLabel">Einstellungen</h1>
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label class="sr-only" for="form-first-name">Name</label>
-                                <input type="text" name="form-first-name" placeholder="Name" class="form-first-name form-control" id="form-first-name">
+                                <input  type="text" class="form-first-name form-control"
+                                        id="form-first-name" placeholder="Vorname"
+                                        name="form-first-name"
+                                        value="<?php echo $user['name']; ?>">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="email">E-Mail</label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="E-Mail" value="">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="E-Mail" value="<?php echo $user['email']; ?>">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="password">Password</label>
