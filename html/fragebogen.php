@@ -122,8 +122,8 @@
                           <input type="radio" name="optradio" class="radio">Option 4</label>
 
                 </div>
-                <button type="submit" name="submit" id="question-submit" class="btn" value="zurück">zurück</button>
-                <button type="submit" name="submit" id="question-submit" class="btn" value="weiter">weiter</button>
+                <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
+                <button type="submit" name="submit" id="answer-submit" class="btn" value="weiter">weiter</button>
 
 
             </div>
