@@ -323,6 +323,20 @@ footer a:focus {
     overflow: hidden;
 }
 
+.icons {
+    width: 100%;
+    padding-top: 20px;
+    font-size: 80px;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+    opacity: 0.3;
+}
+
+.icons i {
+    margin: 0 40px;
+}
+
 
 /***** Einstellungen *****/
 
@@ -408,8 +422,13 @@ footer a:focus {
     text-align: left;
 }
 
-input[type='radio']:checked: {
-    background: green;
+.question-button {
+    width: 100%;
+    text-align: right;
+}
+
+.question-button button {
+    margin-left: 20px;
 }
 
 
