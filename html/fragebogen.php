@@ -22,6 +22,7 @@
     <!-- Timeline -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timeline.css">
 </head>
 
 <body class="body-profil">
@@ -65,100 +66,30 @@
         <div class="question-box">
             <div class="question-top">
                 <div class="form-top-left">
-<<<<<<< HEAD
-                    <h3>Timeline ...</h3>
-=======
-
-<!-- Bootstrap Timeline -->
 
 
-<ul class="timeline" id="timeline">
-
-  <li class="li complete">
-  <div class="status">
-      <h4> 1 </h4>
-    </div>
-  </li>
-
-  <li class="li complete">
-    <div class="status">
-      <h4> 2 </h4>
-    </div>
-  </li>
-
-  <li class="li complete">
-    <div class="status">
-      <h4> 3 </h4>
-    </div>
-  </li>
-
-  <li class="li">
-    <div class="status">
-      <h4> 4 </h4>
-    </div>
-  </li>
-
-  <li class="li">
-    <div class="status">
-      <h4> 5 </h4>
-    </div>
-  </li>
-
-  <li class="li">
-    <div class="status">
-      <h4> 6 </h4>
-    </div>
-  </li>
-
-  <li class="li">
-    <div class="status">
-      <h4> 7 </h4>
-    </div>
-  </li>
-
-  <li class="li">
-    <div class="status">
-      <h4> 8 </h4>
-    </div>
-  </li>
-
-  <li class="li">
-    <div class="status">
-      <h4> 9 </h4>
-    </div>
-  </li>
-
-  <li class="li">
-    <div class="status">
-      <h4> 10 </h4>
-    </div>
-  </li>
-
-
-
-    <!-- andere Farbe -->
-    <li class="li">
-    <div class="status">
-      <h4> 4 </h4>
-    </div>
-  </li>
-  <!-- andere Farbe -->
-
- </ul>
-
-
-
-<!-- Bootstrap Timeline -->
+<!-- new new Bootstrap Timeline -->
+<div class="container">
+	<div class="row">
+		<div class="timeline">
+    	    <span class="period">1</span>
+            <span class="period">2</span>
+            <span class="period period-active">3</span>
+            <span class="period">4</span>
+            <span class="period">5</span>
+            <span class="period">6</span>
+            <span class="period">7</span>
+            <span class="period">8</span>
+            <span class="period">9</span>
+            <span class="period">10</span>
+		</div>
+	</div>
+</div>
+<!-- new new Bootstrap Timeline -->
 
 
 
 
-
-
-
-
-
->>>>>>> 35d1baebe4d047246d6d5d184b0a8849a892a9c3
                 </div>
                 <div class="form-top-right">
                     <i class="fa fa-compass"></i>
@@ -213,6 +144,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.backstretch.min.js"></script>
     <script src="../js/scripts.js"></script>
+    <script src="../js/timeline.js"></script>
 
     <!--[if lt IE 10]>
             <script src="js/placeholder.js"></script>
