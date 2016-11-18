@@ -1,3 +1,21 @@
+<?php
+  session_start();
+	if(!isset($_SESSION['userid'])){
+		header("Location:../index.php");
+	}else{
+  	$user_id = $_SESSION['userid'];
+	}
+
+	require_once("../system/data.php");
+
+
+  ?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -68,9 +86,9 @@
                 <div class="form-top-left">
                 <!-- new new Bootstrap Timeline -->
                 		<div class="timeline">
-                    	    <span class="period">1</span>
+                    	    <span class="period period-active">1</span>
                             <span class="period">2</span>
-                            <span class="period period-active">3</span>
+                            <span class="period">3</span>
                             <span class="period">4</span>
                             <span class="period">5</span>
                             <span class="period">6</span>
