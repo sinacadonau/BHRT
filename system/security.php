@@ -1,9 +1,9 @@
 <?php 
   require_once("data.php");
-	
+
 	function filter_data($input){
 		$db = get_db_connection();
-		
+
 		// HTML- und PHP-Codes wegfiltern: strip_tags(variable)
 		// http://php.net/manual/de/function.strip-tags.php
 		$input = strip_tags($input);
