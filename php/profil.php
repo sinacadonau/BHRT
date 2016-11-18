@@ -87,7 +87,7 @@
         </div>
 
       <div class= "buttonprofil">
-      <button type="submit" name="submit" id="start_submit" class="btn" value="Test_starten">Test starten</button>
+      <button type="button" class="btn btn-sm" href="fragebogen.php">Test starten</button>
         </div>
       </div>
 
