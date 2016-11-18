@@ -45,15 +45,16 @@
 
      if(isset($_POST['register-submit'])){
        // Kontrolle mit isset, ob email und password ausgefüllt wurde
-       if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm-password'])){
+       if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm-password'])){
 
          // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
+         $name = filter_data($_POST['name']);
          $email = filter_data($_POST['email']);
          $password = filter_data($_POST['password']);
          $confirm_password = filter_data($_POST['confirm-password']);
          if($password == $confirm_password){
            // register liefert bei erfolgreichem Eintrag in die DB den Wert TRUE zurück, andernfalls FALSE
-           $result = register($email, $password);
+           $result = register($name, $email, $password);
            if($result){
              $success = true;
              $success_msg = "Sie haben erfolgreich registriert.</br>
@@ -165,8 +166,8 @@
                             <div class="form-bottom">
                                 <form role="form" action="index.php" method="post" class="registration-form">
                                     <div class="form-group">
-                                        <label class="sr-only" for="form-first-name">Name</label>
-                                        <input type="text" name="form-first-name" placeholder="Name" class="form-first-name form-control" id="form-first-name">
+                                        <label class="sr-only" for="name">Name</label>
+                                        <input type="text" name="name" placeholder="Name" class="name form-control" id="name">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="email">E-Mail</label>
@@ -174,7 +175,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="password">Password</label>
-                                        <input type="password" name="password" id="form-password" class="form-control" placeholder="Passwort">
+                                        <input type="password" name="password" id="password" class="form-control" placeholder="Passwort">
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only" for="confirm-password">Passwort bestätigen</label>
@@ -207,6 +208,9 @@
             </div>
         </div>
     </footer>
+
+
+
 
     <!-- Javascript -->
     <script src="js/jquery-1.11.1.min.js"></script>
