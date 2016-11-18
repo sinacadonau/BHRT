@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="../css/form-elements.css">
 </head>
 
-<body class="body-profil">
+<body class="body-resultate">
 
     <!-- Top content -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -64,7 +64,7 @@
 
 
     <div class="resultate-box">
-
+    <div class="resultate-box">
             <div class="form-top-left">
             </div>
             <div class="form-top-right">
@@ -116,7 +116,7 @@
                     <p class="claimStepText">Der Denker ist für gewöhnlich sehr selbstsicher und lässt sich von Konflikten und Kritik
                       nicht aus der Ruhe bringen. Er besitzt ein ausgeprägtes Bewusstsein für seine eigenen Stärken und zweifelt nicht
                       an seinen Fähigkeiten. Häufig sind Menschen dieses Persönlichkeitstypus‘ beruflich sehr erfolgreich, da sie Kompetenz
-                      und Zielstrebigkeit in sich vereinen..</p>
+                      und Zielstrebigkeit in sich vereinen.</p>
                 </div>
             </div>
         </div>
