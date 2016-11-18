@@ -1,3 +1,82 @@
+<?php
+  session_start();
+	if(isset($_SESSION['id'])) unset($_SESSION['id']);
+	session_destroy();
+
+// externe Dateien laden
+  require_once("system/data.php");
+	require_once("system/security.php");
+
+  $error = false;
+  $error_msg = "";
+  $success = false;
+  $success_msg = "";
+
+// Kontrolle, ob die Seite direkt aufgerufen wurde oder vom Login-Formular
+  if(isset($_POST['login-submit'])){
+// Kontrolle mit isset, ob email und password ausgefüllt wurde
+  if(!empty($_POST['email']) && !empty($_POST['password'])){
+
+    // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
+         $email = filter_data($_POST['email']);
+         $password = filter_data($_POST['password']);
+
+         // Liefert alle Infos zu User mit diesen Logindaten
+         $result = login($email,$password);
+
+         // Anzahl der gefundenen Ergebnisse in $row_count
+     		$row_count = mysqli_num_rows($result);
+         if( $row_count == 1){
+           session_start();
+           $user = mysqli_fetch_assoc($result);
+           $_SESSION['userid'] = $user['u_id'];
+           header("Location:html/profil.php");
+         }else{
+           // Fehlermeldungen werden erst später angezeigt
+           $error = true;
+           $error_msg .= "Leider konnte wir Ihre E-Mailadresse oder Ihr Passwort nicht finden.</br>";
+         }
+       }else{
+         $error = true;
+         $error_msg .= "Bitte füllen Sie beide Felder aus.</br>";
+       }
+     }
+
+
+     if(isset($_POST['register-submit'])){
+       // Kontrolle mit isset, ob email und password ausgefüllt wurde
+       if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm-password'])){
+
+         // Werte aus POST-Array auf SQL-Injections prüfen und in Variablen schreiben
+         $email = filter_data($_POST['email']);
+         $password = filter_data($_POST['password']);
+         $confirm_password = filter_data($_POST['confirm-password']);
+         if($password == $confirm_password){
+           // register liefert bei erfolgreichem Eintrag in die DB den Wert TRUE zurück, andernfalls FALSE
+           $result = register($email, $password);
+           if($result){
+             $success = true;
+             $success_msg = "Sie haben erfolgreich registriert.</br>
+             Bitte loggen Sie sich jetzt ein.</br>";
+           }else{
+             $error = true;
+             $error_msg .= "Es gibt ein Problem mit der Datenbankverbindung.</br>";
+           }
+         }else{
+           $error = true;
+           $error_msg .= "Die Passwörter stimmen nicht überein.</br>";
+         }
+       }else{
+         $error = true;
+         $error_msg .= "Bitte füllen Sie alle Felder aus.</br>";
+       }
+     }
+   ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -53,7 +132,7 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
+                                <form role="form" action="index.php" method="post" class="login-form">
                                     <div class="form-group">
                                         <label class="sr-only" for="email">E-Mail</label>
                                         <input type="email" name="email" id="email" class="form-control" placeholder="E-Mail" value="">
@@ -84,7 +163,7 @@
                                 </div>
                             </div>
                             <div class="form-bottom">
-                                <form role="form" action="" method="post" class="registration-form">
+                                <form role="form" action="index.php" method="post" class="registration-form">
                                     <div class="form-group">
                                         <label class="sr-only" for="form-first-name">Name</label>
                                         <input type="text" name="form-first-name" placeholder="Name" class="form-first-name form-control" id="form-first-name">
