@@ -66,30 +66,20 @@
         <div class="question-box">
             <div class="question-top">
                 <div class="form-top-left">
-
-
-<!-- new new Bootstrap Timeline -->
-<div class="container">
-	<div class="row">
-		<div class="timeline">
-    	    <span class="period">1</span>
-            <span class="period">2</span>
-            <span class="period period-active">3</span>
-            <span class="period">4</span>
-            <span class="period">5</span>
-            <span class="period">6</span>
-            <span class="period">7</span>
-            <span class="period">8</span>
-            <span class="period">9</span>
-            <span class="period">10</span>
-		</div>
-	</div>
-</div>
-<!-- new new Bootstrap Timeline -->
-
-
-
-
+                <!-- new new Bootstrap Timeline -->
+                		<div class="timeline">
+                    	    <span class="period">1</span>
+                            <span class="period">2</span>
+                            <span class="period period-active">3</span>
+                            <span class="period">4</span>
+                            <span class="period">5</span>
+                            <span class="period">6</span>
+                            <span class="period">7</span>
+                            <span class="period">8</span>
+                            <span class="period">9</span>
+                            <span class="period">10</span>
+                </div>
+                <!-- new new Bootstrap Timeline -->
                 </div>
                 <div class="form-top-right">
                     <i class="fa fa-compass"></i>
@@ -129,7 +119,7 @@
 
         </div>
     </div>
-
+</div>
 
     <!-- Footer -->
     <footer>
