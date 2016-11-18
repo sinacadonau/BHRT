@@ -18,6 +18,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/custom.css">
+
+    <!-- Timeline -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body class="body-profil">
@@ -61,7 +65,100 @@
         <div class="question-box">
             <div class="question-top">
                 <div class="form-top-left">
+<<<<<<< HEAD
                     <h3>Timeline ...</h3>
+=======
+
+<!-- Bootstrap Timeline -->
+
+
+<ul class="timeline" id="timeline">
+
+  <li class="li complete">
+  <div class="status">
+      <h4> 1 </h4>
+    </div>
+  </li>
+
+  <li class="li complete">
+    <div class="status">
+      <h4> 2 </h4>
+    </div>
+  </li>
+
+  <li class="li complete">
+    <div class="status">
+      <h4> 3 </h4>
+    </div>
+  </li>
+
+  <li class="li">
+    <div class="status">
+      <h4> 4 </h4>
+    </div>
+  </li>
+
+  <li class="li">
+    <div class="status">
+      <h4> 5 </h4>
+    </div>
+  </li>
+
+  <li class="li">
+    <div class="status">
+      <h4> 6 </h4>
+    </div>
+  </li>
+
+  <li class="li">
+    <div class="status">
+      <h4> 7 </h4>
+    </div>
+  </li>
+
+  <li class="li">
+    <div class="status">
+      <h4> 8 </h4>
+    </div>
+  </li>
+
+  <li class="li">
+    <div class="status">
+      <h4> 9 </h4>
+    </div>
+  </li>
+
+  <li class="li">
+    <div class="status">
+      <h4> 10 </h4>
+    </div>
+  </li>
+
+
+
+    <!-- andere Farbe -->
+    <li class="li">
+    <div class="status">
+      <h4> 4 </h4>
+    </div>
+  </li>
+  <!-- andere Farbe -->
+
+ </ul>
+
+
+
+<!-- Bootstrap Timeline -->
+
+
+
+
+
+
+
+
+
+>>>>>>> 35d1baebe4d047246d6d5d184b0a8849a892a9c3
                 </div>
                 <div class="form-top-right">
                     <i class="fa fa-compass"></i>
