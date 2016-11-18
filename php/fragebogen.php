@@ -104,7 +104,7 @@
                 <h3 class="question">Frage 1</h3>
             </div>
 
-            <div class="question-bottom">
+            <div class="question-box">
                 <div class="radio">
                     <label>
                         <input type="radio" name="optradio" class="radio">Option 1</label>
@@ -120,13 +120,13 @@
                 <div class="radio">
                       <label>
                           <input type="radio" name="optradio" class="radio">Option 4</label>
-
-                </div>
+  </div>
+                <div class="question-button">
                 <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
                 <button type="submit" name="submit" id="answer-submit" class="btn" value="weiter">weiter</button>
+</div>
 
 
-            </div>
         </div>
     </div>
 

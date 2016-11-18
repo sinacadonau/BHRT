@@ -337,7 +337,6 @@ footer a:focus {
   margin: 20px;
 }
 
-<<<<<<< HEAD
 .buttonprofil {
   width: 70%;
   margin: auto;
@@ -352,8 +351,7 @@ footer a:focus {
   height: 100%;
 
 }
-=======
->>>>>>> dac0e51d40a9355d9d5662d1ffcd264862248de2
+
 
 /***** Einstellungen *****/
 
@@ -439,6 +437,14 @@ footer a:focus {
     text-align: left;
 }
 
+.question-button {
+  width: 100%;
+  text-align: right;
+}
+
+.question-button button {
+    margin-left: 20px;
+}
 
 
 /***** resultate *****/
