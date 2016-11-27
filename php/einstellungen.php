@@ -1,6 +1,3 @@
-<!-- noch Funktion machen, dass es eine Fehlermeldung gibt, wenn passwörter nicht übereinstimmen -->
-
-
 <?php
   session_start();
 	if(!isset($_SESSION['userid'])){
@@ -16,9 +13,8 @@
      $name = filter_data($_POST['name']);
      $email = filter_data($_POST['email']);
      $password = filter_data($_POST['password']);
-     $confirm_password = filter_data($_POST['confirm_password']);
 
-     $result = update_user($user_id, $name, $email, $password, $confirm_password);
+     $result = update_user($user_id, $name, $email, $password);
 }
 
 // Abfrage der Userdaten
@@ -133,10 +129,6 @@
                             <div class="form-group">
                                 <label class="sr-only" for="password">Passwort</label>
                                 <input type="password" name="password" id="form-password" class="form-control" placeholder="neues Passwort">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="confirm_password">Passwort bestätigen</label>
-                                <input type="password" name="confirm_password" id="form-password" class="form-control" placeholder="Passwort bestätigen">
                             </div>
                         </div>
                         <div>

@@ -54,7 +54,7 @@ function get_result($sql)
 					return get_result($sql);
 				}
 
-				function update_user($user_id, $name, $email, $password, $confirm_password){
+				function update_user($user_id, $name, $email, $password){
 			   	$sql_ok = false;
 			   	$sql = "UPDATE user SET ";
 					if($name != ""){
@@ -65,7 +65,7 @@ function get_result($sql)
 			   		$sql .= "email = '$email', ";
 			   		$sql_ok = true;
 			     }
-			     if($password != "" && $password == $confirm_password) {
+			     if($password != "") {
 			       $sql .= "password = '$password', ";
 			   		$sql_ok = true;
 			     }
