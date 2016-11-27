@@ -11,7 +11,7 @@
   if(isset($_GET['q_id'])){
     $q_id = $_GET['q_id'];
   } else {
-    $q_id =
+    $q_id = "";
   }
 
   ?>
@@ -142,7 +142,7 @@
 
 
 
-                <a href="fragebogen.php?q_id=<?php echo  ?>">
+                <a href="fragebogen.php?q_id=<?php echo "" ?>">
 
 
 
