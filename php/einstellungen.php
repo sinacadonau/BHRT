@@ -150,7 +150,7 @@
                 </div>
                 <div class="modal-body">
                     <div>
-                        <button type="button" class="btn btn-sm" data-dismiss="modal">löschen</button>
+                        <button type="button" class="btn btn-sm" name="delete-submit">löschen</button>
                         <button type="button" class="btn btn-sm" data-dismiss="modal">abbrechen</button>
                     </div>
                 </div>
