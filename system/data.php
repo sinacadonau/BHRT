@@ -38,10 +38,17 @@ function get_result($sql)
 			/* Fragebogen
 			/* ****************************************************** */
 
+// Fragen aus Datenbank
 				function get_question($q_id){
 	  		$sql = "SELECT question FROM question WHERE q_id = $q_id";
 	  		return get_result($sql);
 	  		}
+
+// Antworten aus Datenbank
+				function get_answers($q_id){
+				$sql = "SELECT * FROM answer WHERE q_id = $q_id;";
+				return get_result($sql);
+				}
 
 
 		/* *********************************************************

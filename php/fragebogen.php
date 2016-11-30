@@ -16,8 +16,17 @@ if (isset($_GET["q_id"])){
   $q_id = 1;
 }
 
+if(isset($_POST['typo'])){
+  echo $_POST['typo']. " ". $user_id;
+}
+
+
 $result = get_question($q_id);
 $question = mysqli_fetch_assoc($result);
+
+$answers = get_answers($q_id);
+
+
 ?>
 
 
@@ -91,17 +100,17 @@ $question = mysqli_fetch_assoc($result);
                 <div class="form-top-left">
                 <!-- new new Bootstrap Timeline -->
                 		<div class="timeline">
-                    	    <span class="period period-active">1</span>
-                            <span class="period">2</span>
-                            <span class="period">3</span>
-                            <span class="period">4</span>
-                            <span class="period">5</span>
-                            <span class="period">6</span>
-                            <span class="period">7</span>
-                            <span class="period">8</span>
-                            <span class="period">9</span>
-                            <span class="period">10</span>
-                </div>
+                    	      <a class="period period-active" href="fragebogen.php?q_id=1"><p>1</p></a>
+                            <a class="period" href="fragebogen.php?q_id=2"><p>2</p></a>
+                            <a class="period" href="fragebogen.php?q_id=3"><p>3</p></a>
+                            <a class="period" href="fragebogen.php?q_id=4"><p>4</p></a>
+                            <a class="period" href="fragebogen.php?q_id=5"><p>5</p></a>
+                            <a class="period" href="fragebogen.php?q_id=6"><p>6</p></a>
+                            <a class="period" href="fragebogen.php?q_id=7"><p>7</p></a>
+                            <a class="period" href="fragebogen.php?q_id=8"><p>8</p></a>
+                            <a class="period" href="fragebogen.php?q_id=9"><p>9</p></a>
+                            <a class="period" href="fragebogen.php?q_id=10"><p>10</p></a>
+                    </div>
                 <!-- new new Bootstrap Timeline -->
                 </div>
                 <div class="form-top-right">
@@ -117,41 +126,27 @@ $question = mysqli_fetch_assoc($result);
                 <h3 class="question"><?php echo $question ["question"]; ?></h3>
             </div>
 
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>?q_id=<?php echo $q_id+1 ?>" method="post">
             <div class="question-bottom">
+      <?php while($answer = mysqli_fetch_assoc($answers)){  ?>
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optradio" class="radio">Option 1</label>
+                        <input type="radio" name="typo" class="radio" value="<?php echo $answer["t_id"];?>"><?php echo $answer["answer"];?></label>
                 </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optradio" class="radio">Option 2</label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optradio" class="radio">Option 3</label>
-                </div>
-                <div class="radio">
-                      <label>
-                          <input type="radio" name="optradio" class="radio">Option 4</label>
-  </div>
+      <?php } ?>
                 <div class="question-button">
+                  <a href="fragebogen.php?q_id=<?php echo $q_id-1 ?>">
                   <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
-
+                  </a>
 
 <!-- PHP noch ergänzen!!! -->
 
-
-
-
   <!--              <a href="fragebogen.php?q_id=<"> -->
 
-                <a href="fragebogen.php?q_id=<?php echo "" ?>">
                   <button type="submit" name="submit" id="answer-submit" class="btn" value="weiter">weiter</button>
-                </a>
-</div>
-
-
-        </div>
+              </div>
+            </div>
+          </form>
     </div>
 </div>
 
