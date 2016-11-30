@@ -11,13 +11,9 @@
   if(isset($_GET['q_id'])){
     $q_id = $_GET['q_id'];
   } else {
-<<<<<<< HEAD
     $q_id = 1;
 }
-=======
-    $q_id = "";
-  }
->>>>>>> 144eeb77642fbc676e22ff08994721cc7385879c
+
 
   ?>
 
@@ -143,11 +139,11 @@
 
 
 
-<<<<<<< HEAD
+
   <!--              <a href="fragebogen.php?q_id=<"> -->
-=======
+
                 <a href="fragebogen.php?q_id=<?php echo "" ?>">
->>>>>>> 144eeb77642fbc676e22ff08994721cc7385879c
+
 
 
 
