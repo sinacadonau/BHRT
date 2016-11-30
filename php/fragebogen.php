@@ -12,8 +12,7 @@
     $q_id = $_GET['q_id'];
   } else {
     $q_id = 1;
-}
-
+  }
 
   ?>
 
@@ -143,14 +142,6 @@
   <!--              <a href="fragebogen.php?q_id=<"> -->
 
                 <a href="fragebogen.php?q_id=<?php echo "" ?>">
-
-
-
-
-
-
-
-
                   <button type="submit" name="submit" id="answer-submit" class="btn" value="weiter">weiter</button>
                 </a>
 </div>
