@@ -12,16 +12,8 @@
     $q_id = $_GET['q_id'];
   } else {
     $q_id = 1;
-<<<<<<< HEAD
   }
-=======
-<<<<<<< HEAD
-  }
-=======
-}
->>>>>>> 035e9865de02b70efefde14e1078b69da882168b
 
->>>>>>> ed209412147ad68b46ac4cfde38bbb7b08fa18fd
 
   ?>
 
