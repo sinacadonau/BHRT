@@ -11,14 +11,10 @@
   if(isset($_GET['q_id'])){
     $q_id = $_GET['q_id'];
   } else {
-    $q_id =
-  }
+    $q_id = 1;
+}
 
   ?>
-
-
-
-
 
 
 <!DOCTYPE html>
@@ -114,7 +110,7 @@
         <!-- Fragen und Antworten -->
         <div class="question-box">
             <div class="question-top">
-                <h3 class="question">Frage 1</h3>
+                <h3 class="question"><?php "SELECT question FROM question WHERE q_id = $q_id"; ?></h3>
             </div>
 
             <div class="question-bottom">
@@ -142,7 +138,7 @@
 
 
 
-                <a href="fragebogen.php?q_id=<?php echo  ?>">
+  <!--              <a href="fragebogen.php?q_id=<"> -->
 
 
 
