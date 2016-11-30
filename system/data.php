@@ -83,7 +83,14 @@ function get_result($sql)
 			   	}
 			   }
 
+// FUNKTIONIERT NOCH NICHT!!!
+				 function delete_user($user_id){
+					$sql = "DELETE * FROM user WHERE u_id = $user_id;";
+					get_result($sql);
 
+					header("Location:../index.php");
+					echo "Dein Benutzerkonto wurde erfolgreich gelöscht!";
+				 }
 
 
 ?>

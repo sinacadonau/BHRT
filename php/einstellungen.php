@@ -9,6 +9,7 @@
 	require_once("../system/data.php");
 	require_once("../system/security.php");
 
+// Änderungen filtern und an Funktion update_user weitergeben
   if(isset($_POST['update-submit'])){
      $name = filter_data($_POST['name']);
      $email = filter_data($_POST['email']);
@@ -17,9 +18,16 @@
      $result = update_user($user_id, $name, $email, $password);
 }
 
+// Benutzerkonto löschen FUNKTIONIERT NOCH NICHT!!!
+   if(isset($_POST['delete-submit'])){
+     delete_user($user_id);
+   }
+
+
 // Abfrage der Userdaten
   $result = get_user($user_id);
   $user = mysqli_fetch_assoc($result);
+
 
 
   ?>
@@ -132,8 +140,8 @@
                             </div>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-sm" data-dismiss="modal">abbrechen</button>
                             <button type="submit" class="btn btn-sm" name="update-submit">speichern</button>
+                            <button type="button" class="btn btn-sm" data-dismiss="modal">abbrechen</button>
                         </div>
                     </form>
 
