@@ -12,7 +12,11 @@
     $q_id = $_GET['q_id'];
   } else {
     $q_id = 1;
+<<<<<<< HEAD
   }
+=======
+}
+>>>>>>> 035e9865de02b70efefde14e1078b69da882168b
 
 
   ?>
@@ -139,11 +143,11 @@
 
 
 
-<<<<<<< HEAD
+
   <!--              <a href="fragebogen.php?q_id=<"> -->
-=======
+
                 <a href="fragebogen.php?q_id=<?php echo "" ?>">
->>>>>>> 144eeb77642fbc676e22ff08994721cc7385879c
+
 
 
 
