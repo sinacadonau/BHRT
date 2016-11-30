@@ -32,6 +32,10 @@ if(isset($_POST['typo'])){
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 104f20970123c7525f771122047d424264430b49
 ?>
 
 
@@ -139,12 +143,23 @@ if(isset($_POST['typo'])){
                         <input type="radio" name="typo" class="radio" value="<?php echo $answer["t_id"];?>"><?php echo $answer["answer"];?></label>
                 </div>
       <?php } ?>
+<<<<<<< HEAD
                 <div class="question-button">
                   <!--
                   <a href="fragebogen.php?q_id=<//?php echo $q_id-1 ?>">
                   <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
                   </a>
                   -->
+=======
+
+           <div class="question-button">
+               <!--
+                  <a href="fragebogen.php?q_id=<//?php echo $q_id-1 ?>">
+                  <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
+                  </a>
+            -->
+
+>>>>>>> 104f20970123c7525f771122047d424264430b49
 <!-- PHP noch ergänzen!!! -->
 
   <!--              <a href="fragebogen.php?q_id=<"> -->
