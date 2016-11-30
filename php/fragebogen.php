@@ -27,6 +27,8 @@ $question = mysqli_fetch_assoc($result);
 $answers = get_answers($q_id);
 
 
+
+
 ?>
 
 
@@ -134,10 +136,13 @@ $answers = get_answers($q_id);
                         <input type="radio" name="typo" class="radio" value="<?php echo $answer["t_id"];?>"><?php echo $answer["answer"];?></label>
                 </div>
       <?php } ?>
-                <div class="question-button">
-                  <a href="fragebogen.php?q_id=<?php echo $q_id-1 ?>">
+
+           <div class="question-button">
+               <!--
+                  <a href="fragebogen.php?q_id=<//?php echo $q_id-1 ?>">
                   <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
                   </a>
+            -->
 
 <!-- PHP noch ergänzen!!! -->
 
