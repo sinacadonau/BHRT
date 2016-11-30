@@ -22,11 +22,14 @@ $question = mysqli_fetch_assoc($result);
 
 $answers = get_answers($q_id);
 
+
 if(isset($_POST['typo'])){
   // echo $_POST['typo']. " ". $user_id;
-  $typo = $_POST['typo']
+  $typo = $_POST['typo'];
 
+  $result = save_typo($typo, $user_id);
 }
+
 
 
 ?>
@@ -137,10 +140,11 @@ if(isset($_POST['typo'])){
                 </div>
       <?php } ?>
                 <div class="question-button">
-                  <a href="fragebogen.php?q_id=<?php echo $q_id-1 ?>">
+                  <!--
+                  <a href="fragebogen.php?q_id=<//?php echo $q_id-1 ?>">
                   <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
                   </a>
-
+                  -->
 <!-- PHP noch ergänzen!!! -->
 
   <!--              <a href="fragebogen.php?q_id=<"> -->

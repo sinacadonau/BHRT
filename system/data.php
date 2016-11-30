@@ -51,20 +51,8 @@ function get_result($sql)
 				}
 
 // Typologien mit User abspeichern
-				function save_typo($typo , $u_id){
-
-				if ($typo = 1) {
-					$sql = "INSERT INTO user_typology (u_id, typ1) VALUES ($u_id, 10);";
-				}
-				elseif ($typo = 2)) {
-					$sql = "INSERT INTO user_typology (u_id, typ2) VALUES ($u_id, 10);";
-				}
-				elseif ($typo = 3)) {
-					$sql = "INSERT INTO user_typology (u_id, typ3) VALUES ($u_id, 10);";
-				}
-				elseif ($typo = 4)) {
-					$sql = "INSERT INTO user_typology (u_id, typ4) VALUES ($u_id, 10);";
-				}
+				function save_typo($typo , $user_id){
+							$sql = "INSERT INTO user_typology (u_id, t_id) VALUES ($user_id, $typo);";
 
 				return get_result($sql);
 				}
