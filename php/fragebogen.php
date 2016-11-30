@@ -16,15 +16,17 @@ if (isset($_GET["q_id"])){
   $q_id = 1;
 }
 
-if(isset($_POST['typo'])){
-  echo $_POST['typo']. " ". $user_id;
-}
-
 
 $result = get_question($q_id);
 $question = mysqli_fetch_assoc($result);
 
 $answers = get_answers($q_id);
+
+if(isset($_POST['typo'])){
+  // echo $_POST['typo']. " ". $user_id;
+  $typo = $_POST['typo']
+
+}
 
 
 ?>
