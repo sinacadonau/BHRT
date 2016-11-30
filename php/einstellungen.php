@@ -8,6 +8,28 @@
 
 	require_once("../system/data.php");
 	require_once("../system/security.php");
+
+// Änderungen filtern und an Funktion update_user weitergeben
+  if(isset($_POST['update-submit'])){
+     $name = filter_data($_POST['name']);
+     $email = filter_data($_POST['email']);
+     $password = filter_data($_POST['password']);
+
+     $result = update_user($user_id, $name, $email, $password);
+}
+
+// Benutzerkonto löschen FUNKTIONIERT NOCH NICHT!!!
+   if(isset($_POST['delete-submit'])){
+     delete_user($user_id);
+   }
+
+
+// Abfrage der Userdaten
+  $result = get_user($user_id);
+  $user = mysqli_fetch_assoc($result);
+
+
+
   ?>
 
 <!DOCTYPE html>
@@ -74,10 +96,10 @@
         <div class="content-box">
             <dl class="dl-horizontal lead">
                 <dt>Name</dt>
-                <dd>Sina Cadonau</dd>
+                <dd><?php echo $user['name'];?></dd>
 
                 <dt>E-Mail</dt>
-                <dd>sina.cadonau@mmp.ch</dd>
+                <dd><?php echo $user['email'];?></dd>
             </dl>
             <!-- Button für die Einblendung des modalen Fensters zur Userdatenaktualisierung -->
             <div class="edit-button">
@@ -102,24 +124,24 @@
                         </div>
                         <div class="modal-body">
                             <div class="form-group">
-                                <label class="sr-only" for="form-first-name">Name</label>
-                                <input  type="text" class="form-first-name form-control"
-                                        id="form-first-name" placeholder="Vorname"
-                                        name="form-first-name"
-                                        value="<?php echo $user['name']; ?>">
+                                <label class="sr-only" for="name">Name</label>
+                                <input  type="text" class="form-name form-control"
+                                        id="form-name" placeholder="Name"
+                                        name="name"
+                                        value="<?php echo $user['name'];?>">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="email">E-Mail</label>
                                 <input type="email" name="email" id="email" class="form-control" placeholder="E-Mail" value="<?php echo $user['email']; ?>">
                             </div>
                             <div class="form-group">
-                                <label class="sr-only" for="password">Password</label>
-                                <input type="password" name="password" id="form-password" class="form-control" placeholder="Passwort">
+                                <label class="sr-only" for="password">Passwort</label>
+                                <input type="password" name="password" id="form-password" class="form-control" placeholder="neues Passwort">
                             </div>
                         </div>
                         <div>
-                            <button type="button" class="btn btn-sm" data-dismiss="modal">abbrechen</button>
                             <button type="submit" class="btn btn-sm" name="update-submit">speichern</button>
+                            <button type="button" class="btn btn-sm" data-dismiss="modal">abbrechen</button>
                         </div>
                     </form>
 
@@ -136,13 +158,13 @@
                 </div>
                 <div class="modal-body">
                     <div>
-                        <button type="button" class="btn btn-sm" data-dismiss="modal">löschen</button>
+                        <button type="button" class="btn btn-sm" name="delete-submit">löschen</button>
                         <button type="button" class="btn btn-sm" data-dismiss="modal">abbrechen</button>
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
 
         <!-- Footer -->
         <footer>
@@ -157,6 +179,7 @@
                 </div>
             </div>
         </footer>
+
 
         <!-- Javascript -->
         <script src="../js/jquery-1.11.1.min.js"></script>
