@@ -8,14 +8,17 @@
 
 	require_once("../system/data.php");
 
-  if(isset($_GET['q_id'])){
-    $q_id = $_GET['q_id'];
-  } else {
-    $q_id = 1;
-  }
 
 
-  ?>
+if (isset($_GET["q_id"])){
+  $q_id = $_GET["q_id"];
+} else {
+  $q_id = 1;
+}
+
+$result = get_question($q_id);
+$question = mysqli_fetch_assoc($result);
+?>
 
 
 <!DOCTYPE html>
@@ -111,7 +114,7 @@
         <!-- Fragen und Antworten -->
         <div class="question-box">
             <div class="question-top">
-                <h3 class="question"><?php "SELECT question FROM question WHERE q_id = $q_id"; ?></h3>
+                <h3 class="question"><?php echo $question ["question"]; ?></h3>
             </div>
 
             <div class="question-bottom">
