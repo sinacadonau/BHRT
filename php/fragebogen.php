@@ -30,12 +30,6 @@ if(isset($_POST['typo'])){
   $result = save_typo($typo, $user_id);
 }
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 104f20970123c7525f771122047d424264430b49
 ?>
 
 
@@ -108,18 +102,19 @@ if(isset($_POST['typo'])){
             <div class="question-top">
                 <div class="form-top-left">
                 <!-- new new Bootstrap Timeline -->
-                		<div class="timeline">
-                    	      <a class="period period-active" href="fragebogen.php?q_id=1"><p>1</p></a>
-                            <a class="period" href="fragebogen.php?q_id=2"><p>2</p></a>
-                            <a class="period" href="fragebogen.php?q_id=3"><p>3</p></a>
-                            <a class="period" href="fragebogen.php?q_id=4"><p>4</p></a>
-                            <a class="period" href="fragebogen.php?q_id=5"><p>5</p></a>
-                            <a class="period" href="fragebogen.php?q_id=6"><p>6</p></a>
-                            <a class="period" href="fragebogen.php?q_id=7"><p>7</p></a>
-                            <a class="period" href="fragebogen.php?q_id=8"><p>8</p></a>
-                            <a class="period" href="fragebogen.php?q_id=9"><p>9</p></a>
-                            <a class="period" href="fragebogen.php?q_id=10"><p>10</p></a>
+                <div class="timeline">
+                      <span class="period period-active">1</span>
+                        <span class="period">2</span>
+                        <span class="period">3</span>
+                        <span class="period">4</span>
+                        <span class="period">5</span>
+                        <span class="period">6</span>
+                        <span class="period">7</span>
+                        <span class="period">8</span>
+                        <span class="period">9</span>
+                        <span class="period">10</span>
                     </div>
+
                 <!-- new new Bootstrap Timeline -->
                 </div>
                 <div class="form-top-right">
@@ -135,7 +130,7 @@ if(isset($_POST['typo'])){
                 <h3 class="question"><?php echo $question ["question"]; ?></h3>
             </div>
 
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>?q_id=<?php echo $q_id+1 ?>" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>?q_id=<?php  if ($q_id < 10){echo $q_id+1;} else {header("Location:../resultate.php");};?>" method="post">
             <div class="question-bottom">
       <?php while($answer = mysqli_fetch_assoc($answers)){  ?>
                 <div class="radio">
@@ -143,14 +138,13 @@ if(isset($_POST['typo'])){
                         <input type="radio" name="typo" class="radio" value="<?php echo $answer["t_id"];?>"><?php echo $answer["answer"];?></label>
                 </div>
       <?php } ?>
-<<<<<<< HEAD
+
                 <div class="question-button">
                   <!--
                   <a href="fragebogen.php?q_id=<//?php echo $q_id-1 ?>">
                   <button type="submit" name="submit" id="back-submit" class="btn" value="zurück">zurück</button>
                   </a>
                   -->
-=======
 
            <div class="question-button">
                <!--
@@ -159,7 +153,6 @@ if(isset($_POST['typo'])){
                   </a>
             -->
 
->>>>>>> 104f20970123c7525f771122047d424264430b49
 <!-- PHP noch ergänzen!!! -->
 
   <!--              <a href="fragebogen.php?q_id=<"> -->
