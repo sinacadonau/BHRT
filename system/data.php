@@ -98,7 +98,7 @@ function get_result($sql)
 			   	}
 			   }
 
-// FUNKTIONIERT NOCH NICHT!!!
+// User löschen
 				 function delete_user($user_id){
 					$sql = "DELETE FROM user_typology WHERE u_id = $user_id;";
 					get_result($sql);
