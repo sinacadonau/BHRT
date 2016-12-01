@@ -1,3 +1,19 @@
+<?php
+  session_start();
+	if(!isset($_SESSION['userid'])){
+		header("Location:../index.php");
+	}else{
+  	$user_id = $_SESSION['userid'];
+	}
+
+	require_once("../system/data.php");
+
+$result = get_typo($user_id);
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -62,15 +78,23 @@
 
         <div class="container-fluide">
             <h1>Dein Typologienprofil</h1>
-            <ul>
-            <li>Bastler</li>
-            <li>Macher</li>
-            <li>Denker</li>
-            <li>Organisator</li>
-            </ul>
-          </div>
 
+<table class="table">
+<?php while ( $user_typology = mysqli_fetch_assoc($result)) { ?>
+  <tbody>
+    <tr>
+      <td> <?php echo $user_typology["typology"];?></td>
+      <td> <?php echo $user_typology["sum"]*10; echo "%"?></td>
+    </tr>
+  </tbody>
+      <?php } ?>
+</table>
+
+
+
+          </div>
             </div>
+
     <!-- / Deine Resultate -->
 
     <!-- Typologien-Container Test-Box -->
@@ -139,7 +163,7 @@
             </div>
         </div>
     </footer>
-</div>
+
     <!-- Javascript -->
     <script src="../js/jquery-1.11.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

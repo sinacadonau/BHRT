@@ -12,7 +12,7 @@ function get_db_connection()
 function get_result($sql)
 	{
 		$db = get_db_connection();
-    // echo $sql ."<br>";
+    echo $sql ."<br>";
 		$result = mysqli_query($db, $sql);
 		mysqli_close($db);
 		return $result;
@@ -106,6 +106,28 @@ function get_result($sql)
 					header("Location:../index.php");
 					echo "Dein Benutzerkonto wurde erfolgreich gelöscht!";
 				 }
+
+	 /* *********************************************************
+		/* Resultate
+	/* ****************************************************** */
+
+// Typologien auswerten
+				function get_typo($user_id){
+							$sql = "SELECT COUNT(user_typology.t_id) as sum, typology FROM user_typology
+											RIGHT JOIN typology USING(t_id)
+											WHERE u_id = $user_id
+											GROUP BY t_id;";
+				return get_result($sql);
+				}
+
+
+
+
+
+
+
+
+
 
 
 ?>

@@ -130,7 +130,16 @@ if(isset($_POST['typo'])){
                 <h3 class="question"><?php echo $question ["question"]; ?></h3>
             </div>
 
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>?q_id=<?php  if ($q_id < 10){echo $q_id+1;} else {header("Location:../resultate.php");};?>" method="post">
+<?php if ($q_id < 11){ ?>
+
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>?q_id=<?php echo $q_id+1; ?>" method="post">
+
+<?php }
+      else
+      { ?>
+<a href="resultate.php" target="_new"> <button type="submit" name="submit" class="btn" value="auswerten">Test auswerten</button></a>
+<?php   } ?>
+
             <div class="question-bottom">
       <?php while($answer = mysqli_fetch_assoc($answers)){  ?>
                 <div class="radio">
@@ -156,13 +165,16 @@ if(isset($_POST['typo'])){
 <!-- PHP noch ergänzen!!! -->
 
   <!--              <a href="fragebogen.php?q_id=<"> -->
-
+<?php if ($q_id < 11){ ?>
                   <button type="submit" name="submit" id="answer-submit" class="btn" value="weiter">weiter</button>
+<?php } ?>
               </div>
             </div>
           </form>
     </div>
 </div>
+</div>
+
 
     <!-- Footer -->
     <footer>
