@@ -12,7 +12,7 @@ function get_db_connection()
 function get_result($sql)
 	{
 		$db = get_db_connection();
-    echo $sql ."<br>";
+    //echo $sql ."<br>";
 		$result = mysqli_query($db, $sql);
 		mysqli_close($db);
 		return $result;
@@ -100,11 +100,10 @@ function get_result($sql)
 
 // FUNKTIONIERT NOCH NICHT!!!
 				 function delete_user($user_id){
-					$sql = "DELETE * FROM user WHERE u_id = $user_id;";
+					$sql = "DELETE FROM user_typology WHERE u_id = $user_id;";
 					get_result($sql);
-
-					header("Location:../index.php");
-					echo "Dein Benutzerkonto wurde erfolgreich gelöscht!";
+ 					$sql = "DELETE FROM user WHERE u_id = $user_id;";
+					return get_result($sql);
 				 }
 
 	 /* *********************************************************

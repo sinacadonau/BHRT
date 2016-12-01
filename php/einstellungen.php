@@ -20,9 +20,11 @@
 
 // Benutzerkonto löschen FUNKTIONIERT NOCH NICHT!!!
    if(isset($_POST['delete-submit'])){
-     delete_user($user_id);
+     $result = delete_user($user_id);
+     if($result){
+       header("Location:../index.php");
+     }
    }
-
 
 // Abfrage der Userdaten
   $result = get_user($user_id);
@@ -158,8 +160,10 @@
                 </div>
                 <div class="modal-body">
                     <div>
-                        <button type="button" class="btn btn-sm" name="delete-submit">löschen</button>
+                      <form action="einstellungen.php" method="post" >
+                        <button type="submit" class="btn btn-sm" name="delete-submit">löschen</button>
                         <button type="button" class="btn btn-sm" data-dismiss="modal">abbrechen</button>
+                      </form>
                     </div>
                 </div>
             </div>

@@ -54,7 +54,7 @@
          $confirm_password = filter_data($_POST['confirm-password']);
          if($password == $confirm_password){
            // register liefert bei erfolgreichem Eintrag in die DB den Wert TRUE zurück, andernfalls FALSE
-           $result = register($name, $email, $password);
+           $result = register($email, $password, $name);
            if($result){
              $success = true;
              $success_msg = "Sie haben erfolgreich registriert.</br>

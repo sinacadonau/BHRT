@@ -97,11 +97,11 @@ if(isset($_POST['typo'])){
     <div class="container">
         <h1>Fragebogen</h1>
 
-        <!-- Horizontale Timeline -->
+<!-- TIMELINE
         <div class="question-box">
             <div class="question-top">
                 <div class="form-top-left">
-                <!-- new new Bootstrap Timeline -->
+
                 <div class="timeline">
                       <span class="period period-active">1</span>
                         <span class="period">2</span>
@@ -115,14 +115,14 @@ if(isset($_POST['typo'])){
                         <span class="period">10</span>
                     </div>
 
-                <!-- new new Bootstrap Timeline -->
+
                 </div>
                 <div class="form-top-right">
                     <i class="fa fa-compass"></i>
                 </div>
             </div>
         </div>
-        <!-- / Horizontale Timeline -->
+      -->
 
         <!-- Fragen und Antworten -->
         <div class="question-box">
